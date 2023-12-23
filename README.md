@@ -1,30 +1,22 @@
-# Provably Random Raffle Contracts
+# Smart Contract Lottery
+
+## TODO
+
+1. Figure out programmatic registration for chainlink automation
 
 ## About
 
-This code is to create a proveably random smart contract lottery.
+Foundry tutorial for creating a proveably random smart contract lottery.
 
-## What we want it to do?
+## Features
 
-1. Users can enter by paying for a ticket
-   1. The ticket fees are going to go to the winner during the draw
-2. After x amount of time, the lottery will automatically draw a winner
-   1. And this will be done programmatically
-3. Using Chainlink VRF & Chainlink Automation
-   1. Chalink VRF -> Randomness
-   2. Chainlink Automation -> Time based trigger
+- foundry script to deploy contract that uses VRF
+- foundry script to programmatically create vrf subscription and add a subscriber
 
-## Tests!
+## Tests
 
-1. Write some deploy scripts
-2. Write our tests
-   1. Work on a local chain
-   2. Forked Testnet
-   3. Forked Mainnet
-
-## Resources
-
-- https://openchain.xyz/signatures
+- unit test for raffle contract that runs on anvil and sepolia fork
+  - uses mock vrf coordinator
 
 ## Useful Commands
 
@@ -33,3 +25,7 @@ This code is to create a proveably random smart contract lottery.
 ```
 forge coverage --report debug > coverage.txt
 ```
+
+## Resources
+
+- https://openchain.xyz/signatures
